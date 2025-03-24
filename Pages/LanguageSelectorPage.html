@@ -1,0 +1,455 @@
+<!-- Main content - Header ve Footer arasına yerleştirilecek -->
+<div class="mil-blog-list mip-p-0-160">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-8">
+        <form id="partnerRegistrationForm" class="partner-registration-form">
+          <div class="row">
+            <!-- Kişisel Bilgiler -->
+            <div class="col-md-6">
+              <input
+                class="mil-input mil-up mil-mb-15"
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="İsim *"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                class="mil-input mil-up mil-mb-15"
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Soyisim *"
+                required
+              />
+            </div>
+
+            <div class="col-md-6">
+              <input
+                class="mil-input mil-up mil-mb-15"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-mail *"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                class="mil-input mil-up mil-mb-15"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Şifre *"
+                required
+              />
+            </div>
+
+            <!-- Telefon numarası ve ülke kodu -->
+            <div class="col-md-12">
+              <div
+                class="mil-up mil-mb-15 phone-input-container"
+                style="display: flex"
+              >
+                <select
+                  id="phoneCode"
+                  name="phoneCode"
+                  class="mil-input country-code"
+                  style="width: 120px; margin-right: 10px"
+                >
+                  <option value="+48">🇵🇱 +48</option>
+                  <option value="+90">🇹🇷 +90</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <option value="+49">🇩🇪 +49</option>
+                  <option value="+33">🇫🇷 +33</option>
+                  <option value="+39">🇮🇹 +39</option>
+                  <option value="+34">🇪🇸 +34</option>
+                  <option value="+380">🇺🇦 +380</option>
+                </select>
+                <input
+                  class="mil-input"
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  placeholder="Telefon numarası *"
+                  style="flex: 1"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Milliyet seçici -->
+            <div class="col-md-6">
+              <div class="mil-up mil-mb-15">
+                <select
+                  id="nationality"
+                  name="nationality"
+                  class="mil-input"
+                  required
+                >
+                  <option value="" disabled selected>Milliyet seçiniz *</option>
+                  <option value="TR">Türkiye</option>
+                  <option value="PL">Polonya</option>
+                  <option value="DE">Almanya</option>
+                  <option value="GB">Birleşik Krallık</option>
+                  <option value="FR">Fransa</option>
+                  <option value="IT">İtalya</option>
+                  <option value="ES">İspanya</option>
+                  <option value="UA">Ukrayna</option>
+                  <option value="other">Diğer</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Doğum tarihi -->
+            <div class="col-md-6">
+              <input
+                class="mil-input mil-up mil-mb-15"
+                type="date"
+                id="dateOfBirth"
+                name="dateOfBirth"
+                placeholder="Doğum tarihi *"
+                required
+              />
+            </div>
+
+            <!-- Dil seçici -->
+            <div class="col-md-12">
+              <div class="mil-up mil-mb-15">
+                <select
+                  id="languages"
+                  name="languages"
+                  class="mil-input languages-select"
+                  multiple="multiple"
+                  style="width: 100%"
+                >
+                  <option value="TR">Türkçe</option>
+                  <option value="EN">İngilizce</option>
+                  <option value="PL">Lehçe</option>
+                  <option value="DE">Almanca</option>
+                  <option value="FR">Fransızca</option>
+                  <option value="IT">İtalyanca</option>
+                  <option value="ES">İspanyolca</option>
+                  <option value="UA">Ukraynaca</option>
+                  <option value="RU">Rusça</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Adres bilgileri -->
+            <div class="col-md-8">
+              <input
+                class="mil-input mil-up mil-mb-15"
+                type="text"
+                id="street"
+                name="street"
+                placeholder="Sokak adı *"
+                required
+              />
+            </div>
+            <div class="col-md-4">
+              <input
+                class="mil-input mil-up mil-mb-15"
+                type="text"
+                id="houseNumber"
+                name="houseNumber"
+                placeholder="Bina no *"
+                required
+              />
+            </div>
+
+            <div class="col-md-6">
+              <input
+                class="mil-input mil-up mil-mb-15"
+                type="text"
+                id="floorNumber"
+                name="floorNumber"
+                placeholder="Daire/Kat no"
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                class="mil-input mil-up mil-mb-15"
+                type="text"
+                id="postcode"
+                name="postcode"
+                placeholder="Posta kodu *"
+                required
+              />
+            </div>
+
+            <div class="col-md-12">
+              <input
+                class="mil-input mil-up mil-mb-15"
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Şehir *"
+                required
+              />
+            </div>
+
+            <!-- Diğer sorular -->
+            <div class="col-md-6">
+              <div class="mil-up mil-mb-15">
+                <label class="mil-text-s mil-mb-15">
+                  <input
+                    type="checkbox"
+                    id="isStudent"
+                    name="isStudent"
+                    value="yes"
+                  />
+                  Öğrenci misiniz?
+                </label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mil-up mil-mb-15">
+                <label class="mil-text-s mil-mb-15">
+                  <input
+                    type="checkbox"
+                    id="isOver26"
+                    name="isOver26"
+                    value="yes"
+                  />
+                  26 yaşından büyük müsünüz?
+                </label>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="mil-up mil-mb-15">
+                <label class="mil-text-s mil-mb-15">
+                  <input
+                    type="checkbox"
+                    id="hasCompany"
+                    name="hasCompany"
+                    value="yes"
+                    onclick="toggleIbanField()"
+                  />
+                  Şirketiniz var mı?
+                </label>
+              </div>
+            </div>
+
+            <!-- IBAN alanı (varsayılan olarak gizli) -->
+            <div class="col-md-12 iban-field" style="display: none">
+              <input
+                class="mil-input mil-up mil-mb-15"
+                type="text"
+                id="iban"
+                name="iban"
+                placeholder="IBAN numarası"
+              />
+            </div>
+
+            <!-- Çalışmak istediği uygulamalar -->
+            <div class="col-md-12">
+              <div class="mil-up mil-mb-30">
+                <p class="mil-text-s mil-mb-15">
+                  Hangi uygulamalarda çalışmak istiyorsunuz?
+                </p>
+                <div class="app-checkboxes">
+                  <label class="mil-text-s mil-mb-15 app-checkbox">
+                    <input type="checkbox" name="apps" value="Wolt" /> Wolt
+                  </label>
+                  <label class="mil-text-s mil-mb-15 app-checkbox">
+                    <input type="checkbox" name="apps" value="BoltFood" /> Bolt
+                    Food
+                  </label>
+                  <label class="mil-text-s mil-mb-15 app-checkbox">
+                    <input type="checkbox" name="apps" value="Glovo" /> Glovo
+                  </label>
+                  <label class="mil-text-s mil-mb-15 app-checkbox">
+                    <input type="checkbox" name="apps" value="UberEats" /> Uber
+                    Eats
+                  </label>
+                  <label class="mil-text-s mil-mb-15 app-checkbox">
+                    <input type="checkbox" name="apps" value="Stuard" /> Stuard
+                  </label>
+                  <label class="mil-text-s mil-mb-15 app-checkbox">
+                    <input type="checkbox" name="apps" value="Bolt" /> Bolt
+                  </label>
+                  <label class="mil-text-s mil-mb-15 app-checkbox">
+                    <input type="checkbox" name="apps" value="Uber" /> Uber
+                  </label>
+                  <label class="mil-text-s mil-mb-15 app-checkbox">
+                    <input type="checkbox" name="apps" value="FreeNow" />
+                    FreeNow
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="mil-up mil-mb-30">
+                <button type="submit" class="mil-btn mil-md mil-fw">
+                  Kayıt Ol
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS stilleri - Head bölümüne eklenecek -->
+<style>
+  .app-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .app-checkbox {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  .app-checkbox input {
+    margin-right: 5px;
+  }
+
+  /* Dil seçici için stil */
+  .select2-container--default .select2-selection--multiple {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 0 !important;
+    min-height: 54px !important;
+    padding: 10px !important;
+  }
+
+  .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 5px 10px !important;
+    margin-top: 5px !important;
+  }
+
+  .select2-dropdown {
+    background-color: #1b1717 !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .select2-container--default
+    .select2-results__option--highlighted[aria-selected] {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .select2-container--default .select2-results__option[aria-selected="true"] {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+  }
+
+  /* Telefon alanı için stil */
+  .phone-input-container {
+    display: flex;
+  }
+
+  .country-code {
+    width: 120px;
+    margin-right: 10px;
+  }
+</style>
+
+<!-- Gerekli scriptler - Body sonuna eklenecek -->
+<link
+  href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // Dil seçici için Select2 başlat
+    $(".languages-select").select2({
+      placeholder: "Konuştuğunuz dilleri seçiniz *",
+      allowClear: true,
+    });
+
+    // Form submit olayı
+    $("#partnerRegistrationForm").on("submit", function (e) {
+      e.preventDefault();
+
+      // Tüm form verilerini topla
+      const formData = new FormData(this);
+      const jsonData = {};
+
+      // Checkbox grupları için dizi oluştur
+      const apps = [];
+
+      // FormData'dan JSON'a dönüştür
+      for (const [key, value] of formData.entries()) {
+        if (key === "apps") {
+          apps.push(value);
+        } else if (key === "languages") {
+          if (!jsonData.languages) {
+            jsonData.languages = [];
+          }
+          jsonData.languages.push(value);
+        } else {
+          jsonData[key] = value;
+        }
+      }
+
+      // Uygulamaları ekle
+      jsonData.apps = apps;
+
+      // Boolean değerleri düzelt
+      jsonData.isStudent = $("#isStudent").prop("checked");
+      jsonData.isOver26 = $("#isOver26").prop("checked");
+      jsonData.hasCompany = $("#hasCompany").prop("checked");
+
+      // Tam telefon numarasını oluştur
+      jsonData.fullPhoneNumber = jsonData.phoneCode + jsonData.phoneNumber;
+
+      // Adres verilerini birleştir
+      jsonData.fullAddress = {
+        street: jsonData.street,
+        houseNumber: jsonData.houseNumber,
+        floorNumber: jsonData.floorNumber || "",
+        postcode: jsonData.postcode,
+        city: jsonData.city,
+      };
+
+      // JSON'ı konsola göster (Test için)
+      console.log("Form verileri:", jsonData);
+
+      // API'ye göndermek için:
+      // fetch('https://your-api-endpoint.com/register', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(jsonData),
+      // })
+      // .then(response => response.json())
+      // .then(data => {
+      //   console.log('Success:', data);
+      //   // Başarılı kayıt sonrası işlemler
+      // })
+      // .catch((error) => {
+      //   console.error('Error:', error);
+      //   // Hata işlemleri
+      // });
+    });
+  });
+
+  // IBAN alanını göster/gizle
+  function toggleIbanField() {
+    const hasCompany = $("#hasCompany").prop("checked");
+    if (hasCompany) {
+      $(".iban-field").show();
+    } else {
+      $(".iban-field").hide();
+      $("#iban").val(""); // IBAN alanını temizle
+    }
+  }
+</script>

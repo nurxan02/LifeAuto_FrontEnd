@@ -191,7 +191,7 @@ $(function () {
           youtube_short: {
             index: "youtu.be/",
             id: "youtu.be/",
-            src: "https://www.youtube.com/embed/%id%?autoplay=1",
+            src: "https://www.youtube.com/",
           },
         },
       },

@@ -72,7 +72,7 @@
 .mil-text-gradient-2,
 .mil-text-gradient-3,
 footer .mil-footer-list li a:hover {
-  color: #0d5152;
+  color: #fcd105;
 }
 .mil-btn,
 .mil-btn.mil-add-arrow:after,
@@ -1061,6 +1061,7 @@ footer.mil-footer-dark {
 footer .mil-footer-logo {
   display: inline-block;
 }
+
 .mil-brand:hover {
   opacity: 1;
   filter: grayscale(0);
@@ -1210,6 +1211,20 @@ footer .mil-footer-logo {
 
 .developerCopyright:hover {
   color: #fcd105;
+}
+@media screen and (max-width: 992px) {
+  footer .mil-footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  footer .mil-footer-logo img {
+    height: 350px;
+    padding: 0;
+    margin: 0;
+  }
 }
 @media (max-width: 1200px) {
   .mil-sm-text-center {
