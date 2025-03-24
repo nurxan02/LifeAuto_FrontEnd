@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css2?family=Questrial);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Questrial", sans-serif !important;
+}
+
+body {
+  background-color: #111111;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.logo {
+  margin-bottom: 50px;
+}
+
+.logo h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.logo span {
+  color: #fcd105;
+}
+
+h2 {
+  font-size: 60px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 20px;
+  color: #cccccc;
+  margin-bottom: 60px;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subscribe {
+  max-width: 500px;
+  margin: 0 auto 60px;
+}
+
+.subscribe input {
+  width: 100%;
+  padding: 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  outline: none;
+  color: white;
+}
+
+.subscribe input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe button {
+  width: 100%;
+  padding: 18px;
+  background-color: #fcd105;
+  color: #111111;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.subscribe button:hover {
+  background-color: #fcd105;
+  transform: translateY(-2px);
+}
+
+.social {
+  margin-top: 50px;
+}
+
+.social a {
+  display: inline-block;
+  margin: 0 15px;
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social a:hover {
+  color: #fcd105;
+}
+
+.highlight {
+  color: #fcd105;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}

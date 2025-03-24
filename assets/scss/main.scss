@@ -1,0 +1,15 @@
+//Fonts
+@import url(../fonts/Roboto/stylesheet.css);
+@import url(../fonts/Artful/stylesheet.css);
+@import url(../fonts/Poppins/stylesheet.css);
+
+//Variables
+@import "./variables";
+@import "./mixins";
+@import "./spacing";
+
+//Components
+// @import './components/';
+
+//Pages
+@import "./pages/home.scss";
