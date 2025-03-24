@@ -88,3 +88,23 @@ select.nationalitySelect {
   height: 70px;
   color: #2c3e50;
 }
+label img {
+  border-radius: 10px;
+  height: 55px;
+  margin-left: 10px;
+  transition: 0.2s;
+}
+label img:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+label img {
+  opacity: 0.3;
+}
+.checkbox-checked img {
+  opacity: 1;
+}
+
+.brands .mil-checkbox-frame input[type="checkbox"] {
+  visibility: hidden;
+}

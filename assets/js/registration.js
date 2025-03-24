@@ -72,3 +72,19 @@ document.getElementById("partnerForm").addEventListener("submit", function (e) {
 document.getElementById("phoneNumber").addEventListener("input", function (e) {
   this.value = this.value.replace(/[^0-9]/g, "");
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const checkboxes = document.querySelectorAll(
+    'input[type="checkbox"][name="apps"]'
+  );
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      const label = this.nextElementSibling;
+      if (this.checked) {
+        label.classList.add("checkbox-checked");
+      } else {
+        label.classList.remove("checkbox-checked");
+      }
+    });
+  });
+});
