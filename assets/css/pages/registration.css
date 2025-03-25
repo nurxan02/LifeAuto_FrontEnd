@@ -115,11 +115,7 @@ label img {
   align-items: center;
 }
 
-.mil-checkbox-frame input[name="languages"] {
-  visibility: hidden;
-}
-
-.brands .mil-checkbox-frame input[type="checkbox"] {
+.mil-checkbox-frame input[type="checkbox"] {
   visibility: hidden;
 }
 
