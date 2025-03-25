@@ -88,3 +88,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const checkboxes = document.querySelectorAll(
+    'input[type="checkbox"][name="languages"]'
+  );
+
+  checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener("change", function () {
+      const label = document.querySelector(`label[for="${checkbox.id}"]`);
+
+      if (checkbox.checked) {
+        label.classList.add("labelSelectorActive");
+      } else {
+        label.classList.remove("labelSelectorActive");
+      }
+    });
+  });
+});

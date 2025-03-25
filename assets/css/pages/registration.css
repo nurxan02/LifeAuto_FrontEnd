@@ -104,7 +104,33 @@ label img {
 .checkbox-checked img {
   opacity: 1;
 }
+.languagesBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.languagesBox .mil-checkbox-frame {
+  width: 30%;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.mil-checkbox-frame input[name="languages"] {
+  visibility: hidden;
+}
 
 .brands .mil-checkbox-frame input[type="checkbox"] {
   visibility: hidden;
+}
+
+.labelSelectorActive {
+  background-color: #f99924;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
 }
