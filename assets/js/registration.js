@@ -1,4 +1,3 @@
-// Show/hide bank account field based on selection
 document.getElementById("bankYes").addEventListener("change", function () {
   document.getElementById("bankAccountContainer").style.display = "block";
   document
@@ -11,67 +10,78 @@ document.getElementById("bankNo").addEventListener("change", function () {
   document.getElementById("bankAccountNumber").removeAttribute("required");
 });
 
-// Form submission handler
 document.getElementById("partnerForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // Get form data
   const formData = new FormData(this);
 
-  // Create JSON object
   const jsonData = {
-    firstName: formData.get("firstName"),
-    lastName: formData.get("lastName"),
+    first_name: formData.get("firstName"),
+    last_name: formData.get("lastName"),
     email: formData.get("email"),
     password: formData.get("password"),
+    nationality: formData.get("nationality"),
+    languages: formData.getAll("languages"),
+    date_of_birth: formData.get("dob"),
+
+    has_bank_account: formData.get("hasBank") === "Yes",
+    bank_account_number: formData.get("bankAccountNumber") || null,
+    is_student: formData.get("isStudent") === "Yes",
+    is_over_26: formData.get("isOver26") === "Yes",
+    has_company: formData.get("hasCompany") === "Yes",
+
+    apps: formData.getAll("apps"),
+
     phoneNumber: {
       countryCode: formData.get("countryCode"),
       number: formData.get("phoneNumber"),
     },
-    nationality: formData.get("nationality"),
-    languages: Array.from(formData.getAll("languages")),
-    dateOfBirth: formData.get("dob"),
+
     address: {
       street: formData.get("streetAddress"),
-      floorNumber: formData.get("floorNumber"),
+      floorNumber: formData.get("floorNumber") || null,
       postcode: formData.get("postcode"),
       city: formData.get("city"),
     },
-    hasBankAccount: formData.get("hasBank"),
-    bankAccountNumber:
-      formData.get("hasBank") === "Yes"
-        ? formData.get("bankAccountNumber")
-        : null,
-    isStudent: formData.get("isStudent"),
-    isOver26: formData.get("isOver26"),
-    hasCompany: formData.get("hasCompany"),
-    apps: Array.from(formData.getAll("apps")),
   };
 
-  // Display the JSON data
-  document.getElementById("jsonResult").textContent = JSON.stringify(
-    jsonData,
-    null,
-    2
-  );
-  document.getElementById("resultContainer").style.display = "block";
-
-  // Here you would typically send the JSON data to your API
-  // Example:
-  // fetch('your-api-endpoint', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify(jsonData)
-  // })
-  // .then(response => response.json())
-  // .then(data => console.log('Success:', data))
-  // .catch(error => console.error('Error:', error));
+  fetch("http://127.0.0.1:8000/api/users/create/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(jsonData),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        return response.json().then((err) => Promise.reject(err));
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Success:", data);
+      showSuccessPopup();
+    })
+    .catch((error) => console.error("Error:", error));
 });
+
+function showSuccessPopup() {
+  const popup = document.getElementById("successPopup");
+  popup.style.display = "flex";
+
+  document.getElementById("closePopup").addEventListener("click", function () {
+    popup.style.display = "none";
+    location.reload();
+  });
+}
+
 document.getElementById("phoneNumber").addEventListener("input", function (e) {
   this.value = this.value.replace(/[^0-9]/g, "");
 });
+document.getElementById("floorNumber").addEventListener("input", function (e) {
+  this.value = this.value.replace(/[^0-9]/g, "");
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const checkboxes = document.querySelectorAll(
     'input[type="checkbox"][name="apps"]'
@@ -106,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const radios = document.querySelectorAll('input[type="radio"]');
 

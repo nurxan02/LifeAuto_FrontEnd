@@ -305,6 +305,7 @@
                         placeholder="Mobile Phone Number *"
                         pattern="[0-9]{10,15}"
                         inputmode="numeric"
+                        maxlength="20"
                         required
                       />
                     </div>
@@ -637,9 +638,11 @@
                     <input
                       class="mil-input mil-up mil-mb-15"
                       type="text"
-                      id="floorNumber"
-                      name="floorNumber"
-                      placeholder="Floor Number"
+                      id="city"
+                      name="city"
+                      placeholder="City *"
+                      required
+                      maxlength="100"
                     />
                   </div>
                 </div>
@@ -649,20 +652,21 @@
                     <input
                       class="mil-input mil-up mil-mb-15"
                       type="text"
-                      id="postcode"
-                      name="postcode"
-                      placeholder="Postcode *"
-                      required
+                      id="floorNumber"
+                      name="floorNumber"
+                      placeholder="Floor Number"
+                      maxlength="20"
                     />
                   </div>
                   <div class="col-md-6">
                     <input
                       class="mil-input mil-up mil-mb-15"
                       type="text"
-                      id="city"
-                      name="city"
-                      placeholder="City *"
+                      id="postcode"
+                      name="postcode"
+                      placeholder="Postcode *"
                       required
+                      maxlength="20"
                     />
                   </div>
                 </div>
@@ -708,8 +712,8 @@
                         type="text"
                         id="bankAccountNumber"
                         name="bankAccountNumber"
-                        placeholder="Bank Account Number * (PL.....)"
-                        maxlength="28"
+                        placeholder="Bank Account Number * (IBAN)"
+                        maxlength="34"
                       />
                     </div>
                   </div>
@@ -920,28 +924,16 @@
                   >.
                 </p>
               </form>
-
-              <div
-                id="resultContainer"
-                style="display: none"
-                class="mil-up mil-mb-30"
-              >
-                <h3 class="mil-mb-15">Form Data (JSON):</h3>
-                <pre
-                  id="jsonResult"
-                  style="
-                    background-color: #f5f5f5;
-                    padding: 15px;
-                    border-radius: 5px;
-                    overflow: auto;
-                  "
-                ></pre>
-              </div>
             </div>
           </div>
         </div>
       </div>
-
+      <div id="successPopup" class="popup" style="display: none">
+        <div class="popup-content">
+          <p>You registered successfully!</p>
+          <button id="closePopup">OK</button>
+        </div>
+      </div>
       <!-- content end -->
 
       <!-- footer -->
