@@ -133,14 +133,16 @@ input[type="radio"] + label {
   transition: background-color 0.3s;
   text-align: center;
 }
-
+input[type="date"] {
+  width: 100%;
+}
 input[name="languages"] + label {
   display: inline-block;
   padding: 10px 20px;
   border: 2px solid #fcd105;
   width: 200px;
   border-radius: 4px;
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
   text-align: center;
@@ -150,8 +152,6 @@ input[name="languages"] + label {
   background-color: #f68e11;
   border-color: #f68e11 !important;
   color: white;
-  border: none;
-  cursor: pointer;
   transition: background-color 0.3s;
 }
 
