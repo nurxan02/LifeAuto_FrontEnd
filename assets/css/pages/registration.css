@@ -190,3 +190,7 @@ input[name="languages"] + label {
   color: white;
   transition: background-color 0.3s;
 }
+
+input:focus {
+  outline: 3px solid #f68e11 !important;
+}
