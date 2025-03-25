@@ -106,3 +106,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const radios = document.querySelectorAll('input[type="radio"]');
+
+  radios.forEach(function (radio) {
+    radio.addEventListener("change", function () {
+      const group = document.querySelectorAll(`input[name="${radio.name}"]`);
+
+      group.forEach(function (item) {
+        const label = document.querySelector(`label[for="${item.id}"]`);
+        if (label) {
+          label.classList.remove("labelSelectorActiveRadio");
+        }
+      });
+      const selectedLabel = document.querySelector(`label[for="${radio.id}"]`);
+      if (selectedLabel) {
+        selectedLabel.classList.add("labelSelectorActiveRadio");
+      }
+    });
+  });
+});
