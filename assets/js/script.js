@@ -206,3 +206,16 @@ $(function () {
       },
     });
 });
+
+const trigger = document.getElementById("contact-trigger");
+const overlay = document.getElementById("contact-overlay");
+
+trigger.addEventListener("click", () => {
+  overlay.classList.add("active");
+});
+
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) {
+    overlay.classList.remove("active");
+  }
+});

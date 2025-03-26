@@ -2195,3 +2195,107 @@ footer.mil-footer-dark .mil-footer-bottom {
     background-position: 1000px;
   }
 }
+
+/* calling button  */
+
+#contact-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+#contact-popup {
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid rgb(68, 68, 68, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  text-align: center;
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+#contact-overlay.active #contact-popup {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.popup-title {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.popup-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.social-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#contact-trigger {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #f68e11;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+  transition: all 0.2s ease;
+}
+
+#contact-trigger:hover {
+  transform: scale(1.1);
+  background-color: #b36b14;
+}
+
+#contact-trigger svg {
+  color: white;
+  width: 30px;
+  height: 30px;
+}

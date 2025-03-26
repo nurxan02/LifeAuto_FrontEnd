@@ -7,3 +7,15 @@
 .color3 {
   color: #010101;
 }
+.color4 {
+  color: white;
+}
+
+p.mil-text-m.mil-soft.mil-mb-10.mil-up a {
+  transition: 0.2s;
+  font-weight: 600;
+  font-size: 20px;
+}
+p.mil-text-m.mil-soft.mil-mb-10.mil-up a:hover {
+  color: #fcd105;
+}
