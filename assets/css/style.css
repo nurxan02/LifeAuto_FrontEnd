@@ -2299,3 +2299,10 @@ footer.mil-footer-dark .mil-footer-bottom {
   width: 30px;
   height: 30px;
 }
+@media screen and (max-width: 768px) {
+  .popup-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* call button ended  */
